@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "fd1f3248-a578-4d81-a127-81d707982d22",
+		"name": "Interfer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "42720247"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Registrer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Justin Medler\",\r\n    \"username\": \"jMedler2\",\r\n    \"email\": \"jsonen@com.com\",\r\n    \"password\": \"Jmedler56!\",\r\n    \"role\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3001/interferA/v1/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"jMedler2\",\r\n    \"password\": \"Jmedler56!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3001/interferA/v1/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "updatePassword",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\": \"Jmedler56!\",\r\n    \"newPassword\": \"JsonW212!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/interferA/v1/user/updatePassword/:uid?67c2999371f7ea711de49073",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"interferA",
+								"v1",
+								"user",
+								"updatePassword",
+								":uid"
+							],
+							"query": [
+								{
+									"key": "67c2999371f7ea711de49073",
+									"value": null
+								}
+							],
+							"variable": [
+								{
+									"key": "uid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://127.0.0.1:3001/interferA/v1/user/updateAdministrator"
+					},
+					"response": []
+				},
+				{
+					"name": "update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://127.0.0.1:3001/interferA/v1/user/updateUser"
+					},
+					"response": []
+				},
+				{
+					"name": "delete Amin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:3001/interferA/v1/user/deleteAdministrator"
+					},
+					"response": []
+				},
+				{
+					"name": "delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:3001/interferA/v1/user/delete"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:3001/interferA/v1/category/addCategory"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/interferA/v1/category/updtCategory/:cid",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"interferA",
+								"v1",
+								"category",
+								"updtCategory",
+								":cid"
+							],
+							"variable": [
+								{
+									"key": "cid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delet CSTEGORY",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/interferA/v1/category/deleteCategory/:cid",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"interferA",
+								"v1",
+								"category",
+								"deleteCategory",
+								":cid"
+							],
+							"variable": [
+								{
+									"key": "cid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Companies",
+			"item": [
+				{
+					"name": "Add Company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:3001/interferA/v1/companies/"
+					},
+					"response": []
+				},
+				{
+					"name": "update Company",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://127.0.0.1:3001/interferA/v1/companies/updateCmpany"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:3001/interferA/v1/companies/createRepots"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

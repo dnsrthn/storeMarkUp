@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "67cb2c0563b78c0ce355a8a4"
+  },
+  "nameCategory": "Frituras",
+  "categoryDescription": "hola",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T17:25:25.775Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T17:27:16.161Z"
+  }
+}]
